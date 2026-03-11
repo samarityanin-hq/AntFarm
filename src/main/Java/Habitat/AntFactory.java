@@ -34,7 +34,6 @@ public class AntFactory {
     }
 
     public int generateID(HashSet<Integer> idSet){
-        Random random = new Random();
         int randomID;
         do {
             randomID = random.nextInt(10000);

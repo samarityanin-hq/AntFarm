@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.CheckMenuItem?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.RadioMenuItem?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToolBar?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -10,47 +17,82 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControllerPackage.MainController">
    <children>
-      <AnchorPane fx:id="mainPane" layoutY="37.0" prefHeight="643.0" prefWidth="799.0" style="-fx-background-image: url(&quot;/imgs/grass.png&quot;); -fx-background-size: cover; -fx-background-position: center;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="225.0" AnchorPane.topAnchor="37.0">
+      <AnchorPane fx:id="mainPane" layoutY="62.0" prefHeight="618.0" prefWidth="817.0" style="-fx-background-image: url(&quot;/imgs/grass.png&quot;); -fx-background-size: cover; -fx-background-position: center;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="225.0" AnchorPane.topAnchor="62.0">
          <children>
             <Label fx:id="timerLabel" layoutX="22.0" layoutY="14.0" prefHeight="33.0" prefWidth="373.0" style="-fx-font-family: &quot;Times New Roman&quot;; -fx-font-size: 20px;" AnchorPane.leftAnchor="22.0" AnchorPane.rightAnchor="405.0" AnchorPane.topAnchor="14.0" />
             <Label fx:id="statsLabel" layoutX="600.0" layoutY="14.0" prefHeight="100.0" prefWidth="209.0" style="-fx-font-family: &quot;Times New Roman&quot;; -fx-font-size: 20px;" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0" />
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="815.0" prefHeight="680.0" prefWidth="209.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane layoutX="815.0" prefHeight="680.0" prefWidth="203.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Button fx:id="startButton" layoutX="14.0" layoutY="32.0" mnemonicParsing="false" onAction="#start" prefHeight="45.0" prefWidth="87.0" style="-fx-font-family: &quot;Times New Roman&quot;;" text="START" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="108.0" AnchorPane.topAnchor="32.0" />
-            <Button fx:id="stopButton" layoutX="108.0" layoutY="32.0" mnemonicParsing="false" onAction="#stop" prefHeight="45.0" prefWidth="87.0" style="-fx-font-family: &quot;Times New Roman&quot;;" text="STOP" AnchorPane.leftAnchor="108.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="32.0" />
-            <Button fx:id="timerButton" layoutX="11.0" layoutY="85.0" mnemonicParsing="false" onAction="#showTimer" prefHeight="25.0" prefWidth="88.0" style="-fx-font-family: &quot;Times New Roman&quot;;" text="HIDE TIMER" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="85.0" />
-            <Button fx:id="statsButton" layoutX="11.0" layoutY="119.0" mnemonicParsing="false" onAction="#showStatsLabel" prefHeight="25.0" prefWidth="185.0" style="-fx-font-family: &quot;Times New Roman&quot;;" text="SHOW INFORMATION" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="119.0" />
-            <AnchorPane layoutX="-1.0" layoutY="195.0" prefHeight="100.0" prefWidth="209.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="195.0">
+            <Button fx:id="startButton" layoutX="14.0" layoutY="32.0" mnemonicParsing="false" onAction="#start" prefHeight="45.0" prefWidth="87.0" text="START" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="108.0" AnchorPane.topAnchor="32.0" />
+            <Button fx:id="stopButton" layoutX="108.0" layoutY="32.0" mnemonicParsing="false" onAction="#stop" prefHeight="45.0" prefWidth="87.0" text="STOP" AnchorPane.leftAnchor="108.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="32.0" />
+            <Button fx:id="statsButton" layoutX="12.0" layoutY="114.0" mnemonicParsing="false" onAction="#showStatsLabel" prefHeight="25.0" prefWidth="185.0" text="SHOW INFORMATION" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="114.0" />
+            <AnchorPane layoutY="236.0" prefHeight="100.0" prefWidth="209.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="236.0">
                <children>
                   <ComboBox fx:id="antTypeBox" layoutX="14.0" layoutY="62.0" prefHeight="25.0" prefWidth="87.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="108.0" AnchorPane.topAnchor="62.0" />
                   <ComboBox fx:id="percentageBox" layoutX="108.0" layoutY="62.0" prefHeight="25.0" prefWidth="87.0" AnchorPane.leftAnchor="108.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="62.0" />
                   <Text layoutX="15.0" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: &quot;Times New Roman&quot;; -fx-font-size: 15px;" text="Choose spawn percentage. Default is 30% for warrors ants, 60 for workers" wrappingWidth="185.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="9.0" AnchorPane.topAnchor="-0.36669921875" />
                </children>
             </AnchorPane>
-            <AnchorPane layoutY="340.0" prefHeight="94.0" prefWidth="209.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="340.0">
+            <AnchorPane layoutX="-3.0" layoutY="336.0" prefHeight="155.0" prefWidth="213.0" AnchorPane.leftAnchor="-3.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="336.0">
                <children>
-                  <Text layoutX="12.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: &quot;Times New Roman&quot;; -fx-font-size: 15px;" text="Input spawn time period(in seconds)" wrappingWidth="185.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="14.0" />
-                  <TextField fx:id="PeriodField" layoutX="22.0" layoutY="55.0" onAction="#handleInputText" prefHeight="25.0" prefWidth="166.0" style="-fx-font-family: &quot;Times New Roman&quot;; -fx-font-size: 15px;" AnchorPane.leftAnchor="22.0" AnchorPane.rightAnchor="21.0" AnchorPane.topAnchor="55.0" />
+                  <Text layoutX="7.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: &quot;Times New Roman&quot;; -fx-font-size: 12px; -fx-text-alignment: center;" text="Spawn time period(in seconds)" wrappingWidth="106.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="32.0" />
+                  <TextField fx:id="wrkField" layoutX="7.0" layoutY="62.0" onAction="#handleInputWrk" prefHeight="25.0" prefWidth="102.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="62.0" />
+                  <Button layoutX="125.0" layoutY="61.0" mnemonicParsing="false" onAction="#handleInputWrk" prefHeight="51.0" prefWidth="88.0" text="Enter" AnchorPane.leftAnchor="125.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="61.0" />
+                  <Text layoutX="7.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: &quot;Times New Roman&quot;; -fx-font-size: 12px; -fx-text-alignment: center;" text="Life time period(in seconds)" wrappingWidth="106.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="86.0" />
+                  <TextField fx:id="wrkField1" layoutX="7.0" layoutY="116.0" onAction="#handleInputWrk" prefHeight="25.0" prefWidth="102.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="116.0" />
+                  <Text layoutX="39.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: &quot;Times New Roman&quot;; -fx-font-size: 13px; -fx-text-alignment: center;" text="WORKER SETTINGS" wrappingWidth="149.0" AnchorPane.leftAnchor="39.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="6.41552734375" />
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="-1.0" layoutY="434.0" prefHeight="94.0" prefWidth="209.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="434.0">
+            <RadioButton fx:id="hideTimer" layoutX="16.0" layoutY="85.0" mnemonicParsing="false" onAction="#showTimer" prefHeight="25.0" prefWidth="87.0" style="-fx-font-size: 11px;" text="HIDE TIMER" />
+            <RadioButton fx:id="showTimer" layoutX="106.0" layoutY="89.0" mnemonicParsing="false" onAction="#showTimer" prefHeight="25.0" prefWidth="88.0" style="-fx-font-size: 11px;" text="SHOW TIMER" />
+            <CheckBox fx:id="checkBox" layoutX="14.0" layoutY="177.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="189.0" text="Show info at the end of simulation" wrapText="true" />
+            <AnchorPane layoutY="491.0" prefHeight="155.0" prefWidth="213.0">
                <children>
-                  <TextField fx:id="lifeField" layoutX="22.0" layoutY="55.0" onAction="#handleInputText" prefHeight="25.0" prefWidth="166.0" style="-fx-font-family: &quot;Times New Roman&quot;; -fx-font-size: 15px;" AnchorPane.leftAnchor="22.0" AnchorPane.rightAnchor="21.0" AnchorPane.topAnchor="55.0" />
-                  <Text layoutX="12.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: &quot;Times New Roman&quot;; -fx-font-size: 15px;" text="Input live time period(in seconds)" wrappingWidth="185.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="9.0" />
+                  <Text layoutX="7.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: &quot;Times New Roman&quot;; -fx-font-size: 12px; -fx-text-alignment: center;" text="Spawn time period(in seconds)" wrappingWidth="106.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="32.0" />
+                  <TextField fx:id="wrrField" layoutX="7.0" layoutY="62.0" onAction="#handleInputWrr" prefHeight="25.0" prefWidth="102.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="62.0" />
+                  <Button layoutX="125.0" layoutY="61.0" mnemonicParsing="false" onAction="#handleInputWrr" prefHeight="51.0" prefWidth="88.0" text="Enter" AnchorPane.leftAnchor="125.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="61.0" />
+                  <Text layoutX="7.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: &quot;Times New Roman&quot;; -fx-font-size: 12px; -fx-text-alignment: center;" text="Life time period(in seconds)" wrappingWidth="106.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="86.0" />
+                  <TextField fx:id="wrrField1" layoutX="7.0" layoutY="116.0" onAction="#handleInputWrr" prefHeight="25.0" prefWidth="102.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="116.0" />
+                  <Text layoutX="39.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: &quot;Times New Roman&quot;; -fx-font-size: 13px; -fx-text-alignment: center;" text="WARRIOR SETTINGS" wrappingWidth="149.0" AnchorPane.leftAnchor="39.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="6.41552734375" />
                </children>
             </AnchorPane>
-            <Text layoutX="3.0" layoutY="308.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: &quot;Times New Roman&quot;; -fx-font-size: 15px; -fx-text-alignment: center;" text="Ant types for text fields below is selected from box above)" wrappingWidth="203.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="294.0" />
-            <Button layoutX="11.0" layoutY="151.0" mnemonicParsing="false" onAction="#showCurrentObjects" prefHeight="25.0" prefWidth="185.0" style="-fx-font-family: &quot;Times New Roman&quot;;" text="CURRENT OBJECTS" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="151.0" />
+            <Button layoutX="14.0" layoutY="152.0" mnemonicParsing="false" onAction="#showCurrentObjects" prefHeight="25.0" prefWidth="185.0" text="CURRENT OBJECTS" />
          </children>
       </AnchorPane>
-      <ToolBar prefHeight="40.0" prefWidth="799.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="225.0" AnchorPane.topAnchor="0.0">
+      <MenuBar layoutX="-8.0" layoutY="2.0" prefHeight="25.0" prefWidth="807.0" AnchorPane.leftAnchor="-8.0" AnchorPane.rightAnchor="225.0" AnchorPane.topAnchor="2.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="simulation">
+               <items>
+                  <MenuItem fx:id="startItem" mnemonicParsing="false" onAction="#start" text="start" />
+                  <MenuItem fx:id="stopItem" mnemonicParsing="false" onAction="#stop" text="stop" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="timer">
+               <items>
+                  <RadioMenuItem fx:id="itemHide" mnemonicParsing="false" onAction="#showTimer" text="hide timer" />
+                  <RadioMenuItem fx:id="itemShow" mnemonicParsing="false" onAction="#showTimer" text="show timer" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="information">
+               <items>
+                  <CheckMenuItem fx:id="checkMenuItem" mnemonicParsing="false" text="info at the end" />
+                  <MenuItem mnemonicParsing="false" onAction="#showStatsLabel" text="show info" />
+                  <MenuItem mnemonicParsing="false" onAction="#showCurrentObjects" text="current objects" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <ToolBar layoutY="27.0" prefHeight="40.0" prefWidth="799.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="225.0" AnchorPane.topAnchor="27.0">
          <items>
-            <Button fx:id="startButton1" mnemonicParsing="false" onAction="#start" prefHeight="6.0" prefWidth="61.0" style="-fx-font-family: &quot;Times New Roman&quot;;" text="START" />
-            <Button fx:id="stopButton1" mnemonicParsing="false" onAction="#stop" prefHeight="6.0" prefWidth="61.0" style="-fx-font-family: &quot;Times New Roman&quot;;" text="STOP" />
-            <Button fx:id="timerButton1" mnemonicParsing="false" onAction="#showTimer" prefHeight="25.0" prefWidth="102.0" style="-fx-font-family: &quot;Times New Roman&quot;;" text="HIDE TIMER" />
-            <Button fx:id="statsButton1" mnemonicParsing="false" onAction="#showStatsLabel" prefHeight="25.0" prefWidth="140.0" style="-fx-font-family: &quot;Times New Roman&quot;;" text="SHOW INFORMATION" />
+            <Button fx:id="startButton1" mnemonicParsing="false" onAction="#start" prefHeight="6.0" prefWidth="61.0" text="START" />
+            <Button fx:id="stopButton1" mnemonicParsing="false" onAction="#stop" prefHeight="6.0" prefWidth="61.0" text="STOP" />
+            <RadioButton fx:id="hideTimer1" mnemonicParsing="false" onAction="#showTimer" prefHeight="25.0" prefWidth="87.0" text="HIDE TIMER" />
+            <RadioButton fx:id="showTimer1" mnemonicParsing="false" onAction="#showTimer" prefHeight="25.0" prefWidth="97.0" text="SHOW TIMER" />
+            <CheckBox fx:id="checkBox1" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" text="END INFO" />
+            <Button mnemonicParsing="false" onAction="#showCurrentObjects" prefHeight="25.0" prefWidth="122.0" text="CURRENT OBJECTS" />
+            <Button fx:id="statsButton1" mnemonicParsing="false" onAction="#showStatsLabel" prefHeight="25.0" prefWidth="135.0" text="SHOW INFORMATION" />
          </items>
       </ToolBar>
    </children>

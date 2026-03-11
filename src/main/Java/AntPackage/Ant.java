@@ -9,7 +9,7 @@ public abstract class Ant implements IBehaviour{
     protected double x, y;
     protected double speedX, speedY;
     protected long timeOfBirth;
-    protected int ID, lifeTime;;
+    protected int ID, lifeTime;
 
     public Ant(double x, double y){
         this.x = x;

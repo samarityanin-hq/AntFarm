@@ -28,7 +28,7 @@ public class Habitat {
     private HashSet<Integer> idSet = new HashSet<>();
     private TreeMap<Long, Integer> timeTree = new TreeMap<>();
 
-    private Habitat(){};
+    private Habitat(){}
 
     public static Habitat getInstance(){
         if (instance == null){
@@ -131,7 +131,6 @@ public class Habitat {
     public HabitatConfig getConfiguration(){
         return conf;
     }
-    public Pane getPane(){return pane;}
     public String getAllStats(){return statistic.showStats(conf);}
     public String getCurrentStats(){return statistic.currentObjects(timeTree, simulationStart);}
 }

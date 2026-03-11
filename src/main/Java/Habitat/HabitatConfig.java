@@ -1,11 +1,13 @@
 package Habitat;
 
 public class HabitatConfig {
-    private int total, totalWorker, totalWarrior, workerSpawnTime, warriorSpawnTime, wrkLive, wrrLive;
+    private int total, totalWorker, totalWarrior, workerSpawnTime,
+            warriorSpawnTime, wrkLive, wrrLive;
+
     private float warriorPercent, workerPercent;
     {
-        warriorPercent = 0.6f;
-        workerPercent = 0.3f;
+        warriorPercent = 0.3f;
+        workerPercent = 0.6f;
         workerSpawnTime = 5000;
         warriorSpawnTime = 10000;
         wrrLive = 15000;
